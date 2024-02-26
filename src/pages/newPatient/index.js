@@ -1,0 +1,8 @@
+export {default as NewPatientSubmitted} from './NewPatientSubmitted'
+export {default as Medicals } from './Medicals' 
+export {default as Pdf} from './Pdf'
+export {default as IfItApplies} from './IfItApplies'
+export {default as OrgansPastSurgery} from './OrgansPastSurgery'
+export {default as PastMedical} from './PastMedical'
+export {default as SurgeryHistory} from './SurgeryHistory'
+export {default as Other } from './Other'
