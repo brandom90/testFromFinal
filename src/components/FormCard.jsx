@@ -8,12 +8,12 @@ const FormCard = ({ name,description,link}) => {
   const navigate = useNavigate()
   //sx={{border:'1px solid black', width:'80%', height:'100px', margin:'5px'}}
   return (
-    <Card >
+    <Card className='grid-item'>
       <CardActionArea sx={{width:'100%', height:'100%'}} onClick={()=>{navigate(link)}}>
-      <Stack className='grid-item'>
-      <Typography textAlign={'center'} sx={{fontWeight:'bold', marginRight:'10px', marginLeft:'15px'}}>{name}: </Typography>
+      <Stack >
+      <Typography  sx={{fontWeight:'bold'}}>{name}: </Typography>
 
-      <Typography textAlign={'center'}>{description}</Typography>
+      <Typography >{description}</Typography>
 
       </Stack>
       </CardActionArea>

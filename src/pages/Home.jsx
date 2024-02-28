@@ -5,10 +5,12 @@ import FormCard from '../components/FormCard'
 const Home = ({forms}) => {
   const myStyles = {
     display: 'grid',
-    gap: '50px',
+    gap: '20px',
     gridTemplateColumns: 'auto auto auto',
-    backgroundColor: 'blue',
-    padding: '10px',
+    backgroundColor: '#1F456E',
+    padding: '20px',
+    marginTop: '50px',
+    borderRadius: '25px'
   }
   
   return (
