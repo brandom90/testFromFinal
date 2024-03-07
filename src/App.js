@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
+import "./index.css"
 //components
 import {StartPage} from './components'
 //pages
