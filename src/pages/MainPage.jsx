@@ -8,7 +8,7 @@ const MainPage = ({forms}) => {
         margin: '80px',
         display: 'grid',
         gridTemplateColumns: 'auto auto', 
-        gap: '2rem',
+        gap: '4.3rem',
       
    }
 
@@ -33,7 +33,7 @@ const MainPage = ({forms}) => {
   }, [forms.length]); 
 
   return (
-    <Box sx={{backgroundImage:`url(${HospitalHero})`, backgroundRepeat: 'no-repeat',  backgroundSize: 'cover',  backgroundPosition: 'center'}}>
+    <Box sx={{height: '100vh',backgroundImage:`url(${HospitalHero})`, backgroundRepeat: 'no-repeat',  backgroundSize: 'cover',  backgroundPosition: 'center'}}>
        <ThemeProvider theme={theme}>
         <Typography sx={{  marginRight: '30px', textAlign: 'center', alignItems: 'center', transform: showTitle ? 'translateY(0)' : 'translateY(-100vh)',  transition: 'transform 0.5s ease'}}variant='h2'> ROI Forms Portal</Typography>
             <Stack sx={myStyles}>
