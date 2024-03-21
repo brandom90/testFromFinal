@@ -4,7 +4,7 @@ import "./index.css"
 //components
 import {StartPage} from './components'
 //pages
-import { Home, Done } from './pages'
+import { Home, Done, MainPage } from './pages'
 import { PatientOne, PatientTwo, PatientThree, PatientFour, PatientFive, PatientSix, Submitted } from './pages/signIn/index'
 import {NewPatientSubmitted,Medicals, PastMedical, IfItApplies, SurgeryHistory, OrgansPastSurgery, Other} from './pages/newPatient/index'
 import HippaOne from './pages/hippa/HippaOne'
@@ -31,7 +31,7 @@ function App() {
         {/* Portal */}
         <Route path='/' element={<Home forms={forms}/>}/>
         <Route path='/done' element={<Done/>}/>
-        
+        <Route path='/MainPage' element={<MainPage forms={forms}/>}/>
         {/* Sign In */}
         <Route path='/signInForm' element={<StartPage title='Sign In' link='/signInOne' />}/>
         <Route path="/signInOne" element={<PatientOne />}/> 

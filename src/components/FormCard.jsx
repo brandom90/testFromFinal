@@ -2,6 +2,7 @@ import { Box, Button, Stack, Typography, Card, CardActionArea } from '@mui/mater
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+
 import './form.css'
 //formats each page's card in the main page.
 const FormCard = ({ name,description,link}) => {
@@ -11,7 +12,7 @@ const FormCard = ({ name,description,link}) => {
     <Card className='grid-item'>
       <CardActionArea sx={{width:'100%', height:'100%'}} onClick={()=>{navigate(link)}}>
       <Stack >
-      <Typography  sx={{fontWeight:'bold'}}>{name}: </Typography>
+      <Typography  sx={{fontWeight:'bold',  fontSize: '24px' }}>{name}: </Typography>
 
       <Typography >{description}</Typography>
 
