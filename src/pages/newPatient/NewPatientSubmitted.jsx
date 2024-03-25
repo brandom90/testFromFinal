@@ -16,14 +16,14 @@ const NewPatientSubmitted = () => {
   
   
   return (
-    <Stack>
-      <Box>
-        <EmailSubmit PDF={<Pdf/>} firstName={userData.name} lastName={userData.last} title={`${userData.name}_${userData.last}_new_patient.pdf`}  />
-        <PDFViewer width={'800px'} height={'600px'}>
+    <Stack sx={{ height:'100vh',backgroundImage: 'linear-gradient(to top, lightblue, white)',}}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', marginTop:'50px' }}>  
+        <PDFViewer marginTop={'10px'} width={'80%'} height={'600px'}>
           <Pdf/>
         </PDFViewer>
       </Box>
-      <Box>
+      <EmailSubmit PDF={<Pdf/>} firstName={userData.name} lastName={userData.last} title={`${userData.name}_${userData.last}_new_patient.pdf`}  />
+      <Box >
         <Navigate backLink={'/newPatientSix'} last={true}/>
       </Box>
     </Stack>

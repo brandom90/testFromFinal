@@ -11,7 +11,7 @@ const SurgeryHistory = () => {
 
   const surgeryHistory = variables[4]
   return (
-    <Stack direction={styles.stack}>
+    <Stack direction={styles.stack} sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)',}}>
     <Box sx={styles.textBox}>
       <ProgressBar selected={4}/>
       <Typography textAlign={'center'} variant='h2'>Surgical History</Typography>

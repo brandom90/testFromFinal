@@ -13,7 +13,7 @@ const Medicals = () => {
   const names = userData
 
   return (
-    <Stack>
+    <Stack sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)',}}>
 
     <Stack direction={styles.stack}>
       <Box sx={styles.textBox}>

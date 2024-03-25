@@ -25,28 +25,27 @@ const HippaOne = () => {
 
   return (
     <Box>
-      <Typography>Robotic Orthopaedic Institute</Typography>
-      <Typography>Gregory J Hicken MD PC</Typography>
+      <Typography variant='h3' textAlign={'center'}>Robotic Orthopaedic Institute</Typography>
+      <Typography variant='h3' textAlign={'center'}>Gregory J Hicken MD PC</Typography>
 
-      <Typography>Acknowledgement of receipt of notice of privacy practices</Typography>
+      <Typography variant='h4' textAlign={'center'}>Acknowledgement of receipt of notice of privacy practices</Typography>
 
-      <Typography>This form is used to obtain acknowledgement of receipt of it's Notice of Privacy Practices or document its good faith or to otain that acknowledgement</Typography>
+      <Typography variant='h5' textAlign={'center'}>This form is used to obtain acknowledgement of receipt of it's Notice of Privacy Practices or document its good faith effort to obtain that acknowledgement</Typography>
       
-      <Typography>You May Refuse to Sign This Acknowledgment</Typography>
+      <Typography variant='h5' textAlign={'center'}>You May Refuse to Sign This Acknowledgment</Typography>
 
-      <Typography>I have received a copy of this offices's Notice of Privacy Practices</Typography>
+      <Typography variant='h5' textAlign={'center'} sx={{marginBottom:'20px'}}>I have received a copy of this offices's Notice of Privacy Practices</Typography>
 
-      <Stack direction={'row'}>
+      <Stack direction={'column'} sx={{width:'400px', margin:'0 auto'}}>
         <Typography>First Name</Typography>
         <TextField onChange={(e)=>{setFname(e.target.value)}}/>
         <Typography>Last Name</Typography>
         <TextField onChange={(e)=>{setLname(e.target.value)}} />
       </Stack>
       <Stack direction={'row'}>
-        <Typography>Date</Typography>
-        <TextField />
+        
       </Stack>
-      <Box sx={{border:'1px solid black', width:'800px', height:'200px'}}>
+      <Box sx={{border:'1px solid black', width:'800px', height:'200px', marginTop:'80px'}}>
       <SignaturePad 
         ref={sigCanvas}
         canvasProps={{

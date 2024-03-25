@@ -12,7 +12,7 @@ const IfItApplies = () => {
   const ifItAppliesInput = variables[3]
 
   return (
-    <Stack direction={styles.stack}>
+    <Stack direction={styles.stack} sx={{ height: '100vh', backgroundImage: 'linear-gradient(to top, lightblue, white)',}}>
       <Box sx={styles.textBox}>
       <ProgressBar selected={3}/>
 

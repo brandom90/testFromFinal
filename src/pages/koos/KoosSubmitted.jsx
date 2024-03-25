@@ -5,7 +5,7 @@ import { PDFViewer } from '@react-pdf/renderer'
 import koosVariables from './koosVariables'
 import {EmailSubmit, Navigate} from '../../components'
 
-const KoosSubmitted = ({backlink}) => {
+const KoosSubmitted = ({backLink}) => {
   return (
     <Box>
     <PDFViewer width={'800px'} height={'800px'}>
@@ -13,7 +13,7 @@ const KoosSubmitted = ({backlink}) => {
     </PDFViewer>
 
       <EmailSubmit PDF={<HKoosPDF lists={koosVariables} />} firstName={koosVariables[5].first} lastName={koosVariables[5].last} title={`${koosVariables[5].first}_${koosVariables[5].last}_koos.pdf`}/>
-      <Navigate backLink={backlink} last={true}/>
+      <Navigate backLink={backLink} last={true}/>
     </Box>
   )
 }

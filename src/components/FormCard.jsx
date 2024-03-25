@@ -7,18 +7,20 @@ import './form.css'
 //formats each page's card in the main page.
 const FormCard = ({ name,description,link}) => {
   const navigate = useNavigate()
-  //sx={{border:'1px solid black', width:'80%', height:'100px', margin:'5px'}}
+ 
   return (
-    <Card className='grid-item'>
+   
+    <Card className={ name==='New Patient' ? 'home-item' : 'grid-item'}>
       <CardActionArea sx={{width:'100%', height:'100%'}} onClick={()=>{navigate(link)}}>
       <Stack >
-      <Typography  sx={{fontWeight:'bold',  fontSize: '24px' }}>{name}: </Typography>
+      <Typography  sx={{fontWeight:'bold',  fontSize:'48px' }}>{name}: </Typography>
 
-      <Typography >{description}</Typography>
+      <Typography sx={{fontSize:'20px', color:'white'}} >{description}</Typography>
 
       </Stack>
       </CardActionArea>
     </Card>  
+
   )
 }
 

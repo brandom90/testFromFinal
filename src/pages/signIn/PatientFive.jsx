@@ -49,7 +49,7 @@ const PatientFive = () => {
   }
 
   return (
-    <Stack>
+    <Stack sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
       <Box>
         <ProgressBar selected={5}/>
         <Typography variant="h2" sx={{textAlign:'center'}}>Guarantor Information</Typography>

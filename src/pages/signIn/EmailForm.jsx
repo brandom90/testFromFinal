@@ -1,7 +1,7 @@
 import { React,useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
-import { Button, Typography } from '@mui/material'
+import { Button, Typography, Box } from '@mui/material'
 import {pdf} from '@react-pdf/renderer'
 import PDFfile from './PDFfile'
 import informationLists from './utils/variables'
@@ -62,12 +62,12 @@ const EmailForm = () => {
     }
 
     return (
-      <div>
+      <Box sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
         <Button sx={{width:'150px',height:'60px',marginBottom:'20px'}} variant='contained' onClick={handleSubmit}>
             <Typography sx={{textDecoration:'none', color:'white', fontSize:'24px'}}>Submit</Typography>
         </Button>
         
-    </div>
+    </Box>
     
   )
 

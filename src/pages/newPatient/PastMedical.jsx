@@ -10,7 +10,7 @@ const PastMedical = () => {
   return (
     
     
-    <Stack direction={styles.stack}>
+    <Stack direction={styles.stack} sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)',}}>
       
       <Box sx={styles.textBox}>
         <ProgressBar selected={2}/>

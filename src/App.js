@@ -4,7 +4,7 @@ import "./index.css"
 //components
 import {StartPage} from './components'
 //pages
-import { Home, Done, MainPage } from './pages'
+import { Home, MainPage } from './pages'
 import { PatientOne, PatientTwo, PatientThree, PatientFour, PatientFive, PatientSix, Submitted } from './pages/signIn/index'
 import {NewPatientSubmitted,Medicals, PastMedical, IfItApplies, SurgeryHistory, OrgansPastSurgery, Other} from './pages/newPatient/index'
 import HippaOne from './pages/hippa/HippaOne'
@@ -21,8 +21,11 @@ function App() {
   const [footAndAnkleData, setFootAndAnkleData] = useState(NaN)
 
   //list of all the forms that will show up on the portal. 
-  const forms = [{ name:'New Patient', description:'Fill out this form if you have never been a patient here before.', link:'/newPatient',nextLink:'/newPatientOne'}, { name:'Sign In ', description:'Sign in at the beginning of your visit', link:'/signInForm',nextLink:'/signInOne'}, {name:'KOOS', description:'KOOS description', link:'/koosStart'}, {name:'HOOS', description:'HOOS description', link:'/hoosStart'},{name:'HIPPA', description:'HIPPA description', link:'/hippaStart'}, {name:'Foot and Ankle', description:'Foot and Ankle', link:'/footAndAnkleStart'}]
+  const forms = [ {name:'KOOS', description:'KOOS description', link:'/koosStart'}, {name:'HOOS', description:'HOOS description', link:'/hoosStart'},{name:'HIPPA', description:'HIPPA description', link:'/hippaStart'}, {name:'Foot/Ankle', description:'Foot/Ankle', link:'/footAndAnkleStart'}]
   
+  //{ name:'New Patient', description:'Fill out this form if you have never been a patient here before.', link:'/newPatient',nextLink:'/newPatientOne'},
+  //{ name:'Sign In ', description:'Sign in at the beginning of your visit', link:'/signInForm',nextLink:'/signInOne'},
+  //unused here
 
 
   return (
@@ -30,7 +33,6 @@ function App() {
       <Routes>
         {/* Portal */}
         <Route path='/' element={<Home forms={forms}/>}/>
-        <Route path='/done' element={<Done/>}/>
         <Route path='/MainPage' element={<MainPage forms={forms}/>}/>
         {/* Sign In */}
         <Route path='/signInForm' element={<StartPage title='Sign In' link='/signInOne' />}/>

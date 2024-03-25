@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Form = () => {  
   return (
-    <Box>
+    <Box sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
       <Typography variant='h1' sx={{textAlign:'center'}}>Patient Sign In</Typography>
       
       <Button variant='contained' sx={{

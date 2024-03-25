@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 
 const PDFfile = () => {
   return (
-    <Document>
+    <Document sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
       <Page style={styles.div}>
           <Text style={styles.heading}>Patient Information</Text>
           

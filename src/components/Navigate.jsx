@@ -2,26 +2,38 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Stack, Typography, Card, CardActionArea } from '@mui/material'
 
 
 
 const Navigate = ({backLink, forwardLink, first, last}) => {
   const navigate = useNavigate()
   return (
-    <Box>
+       
+    <Card >
+      <CardActionArea sx={{width:'100%', height:'100%'}} onClick={() => {navigate(backLink)}}>
+      <Stack >
       { 
       !first && <Button sx={{  position:'fixed', left:0, bottom:0, color:'black'}} onClick={() => {navigate(backLink)}}>
-            <ArrowBackIcon  sx={{fontSize: 80,}}/>
+            <ArrowBackIcon  sx={{fontSize: 80,  color: 'rgb(143, 158, 179)'}}/>
           </Button>
       }
           
-      { !last &&
+    
+
+      </Stack>
+      </CardActionArea>
+      <Stack>
+        <CardActionArea>
+        { !last &&
       <Button sx={{ position:'fixed', right:0, bottom:0, color:'black'}} onClick={() => {navigate(forwardLink)}}>
-          <ArrowForwardIcon sx={{ fontSize: 80}}/>
+          <ArrowForwardIcon sx={{ fontSize: 80, color: 'rgb(143, 158, 179)'}}/>
       </Button>
       }
-    </Box>
+        </CardActionArea>
+      </Stack>
+    </Card>  
+
   )
 }
 
