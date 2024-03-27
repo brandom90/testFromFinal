@@ -4,7 +4,7 @@
 const symptoms = [
   {instruction:'Answer These questions thinking of your knee symptoms during the last week'},
   {question:'Do you have swelling in your knee',value:0, options:['Never(+0)','Rarely(+1)','Sometimes(+2)','Often(+3)','Always(+4)']},
-  {question:'Do you feel grinding, hear clikcing, or any other type of noise when your knee moves',value:0, options:['Never(+0)','Rarely(+1)','Sometimes(+2)','Often(+3)','Always(+4)']},
+  {question:'Do you feel grinding, hear clicking, or any other type of noise when your knee moves',value:0, options:['Never(+0)','Rarely(+1)','Sometimes(+2)','Often(+3)','Always(+4)']},
   {question:'Does your knee catch or hang up when moving',value:0, options:['Never(+0)','Rarely(+1)','Sometimes(+2)','Often(+3)','Always(+4)']},
   {question:'Can you straighten your knee fully',value:0,options:['Always(+0)','Often(+1)','Sometimes(+2)','Rarely(+3)','Never(+4)']},
   {question:'Can you bend your knee fully?',value:0,options:['Always(+0)','Often(+1)','Sometimes(+2)','Rarely(+3)','Never(+4)']},
@@ -27,7 +27,7 @@ const pain = [
 ]
 
 const dailyLiving = [
-  {instruction:'This section describes your ability to move around adn to look after yourself. For each of the following activities, please indicate the degree of difficulty you have experienced in the last week due to your knees'},
+  {instruction:'This section describes your ability to move around and to look after yourself. For each of the following activities, please indicate the degree of difficulty you have experienced in the last week due to your knees'},
   {question:'Descending stairs',value:0,options:['None(+0)','Mild(+1)','Moderate(+2)','Severe(+3)','Extreme(+4)']},
   {question:'Ascending stairs',value:0,options:['None(+0)','Mild(+1)','Moderate(+2)','Severe(+3)','Extreme(+4)']},
   {question:'Rising from sitting',value:0,options:['None(+0)','Mild(+1)','Moderate(+2)','Severe(+3)','Extreme(+4)']},

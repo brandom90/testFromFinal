@@ -13,7 +13,8 @@ const PastMedical = () => {
     <Stack direction={styles.stack} sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)',}}>
       
       <Box sx={styles.textBox}>
-        <ProgressBar selected={2}/>
+      {/*<ProgressBar selected={2} amount={[1,2,3,4,5,6]}/> */}
+      <ProgressBar selected={2} amount={[{num:1, link:'/newPatientOne'},{num:2, link:'/newPatientTwo'},{num:3, link:'/newPatientThree'},{num:4, link:'/newPatientFour'},{num:5, link:'/newPatientFive'},{num:6, link:'/newPatientSix'}]}/>
         <Typography variant="h2" textAlign={'center'}>Past Medical History</Typography>
         <Typography textAlign={'center'}>Have you ever had any of the following</Typography>
       </Box>

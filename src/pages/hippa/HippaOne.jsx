@@ -4,8 +4,10 @@ import {EmailSubmit} from '../../components'
 import SignaturePad from 'react-signature-canvas'
 import PDF from './PDF'
 import { PDFViewer } from '@react-pdf/renderer'
+import { useNavigate } from 'react-router-dom'
 
 const HippaOne = () => {
+  const navigate = useNavigate()
 
   const sigCanvas = useRef({})
 
@@ -24,17 +26,17 @@ const HippaOne = () => {
 
 
   return (
-    <Box>
-      <Typography variant='h3' textAlign={'center'}>Robotic Orthopaedic Institute</Typography>
-      <Typography variant='h3' textAlign={'center'}>Gregory J Hicken MD PC</Typography>
+    <Box textAlign={'center'} sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
+      <Typography variant='h3'>Robotic Orthopaedic Institute</Typography>
+      <Typography variant='h3'>Gregory J Hicken MD PC</Typography>
 
-      <Typography variant='h4' textAlign={'center'}>Acknowledgement of receipt of notice of privacy practices</Typography>
+      <Typography variant='h4'>Acknowledgement of receipt of notice of privacy practices</Typography>
 
-      <Typography variant='h5' textAlign={'center'}>This form is used to obtain acknowledgement of receipt of it's Notice of Privacy Practices or document its good faith effort to obtain that acknowledgement</Typography>
+      <Typography variant='h5'>This form is used to obtain acknowledgement of receipt of it's Notice of Privacy Practices or document its good faith effort to obtain that acknowledgement</Typography>
       
-      <Typography variant='h5' textAlign={'center'}>You May Refuse to Sign This Acknowledgment</Typography>
+      <Typography variant='h5'>You May Refuse to Sign This Acknowledgment</Typography>
 
-      <Typography variant='h5' textAlign={'center'} sx={{marginBottom:'20px'}}>I have received a copy of this offices's Notice of Privacy Practices</Typography>
+      <Typography variant='h5' sx={{marginBottom:'20px'}}>I have received a copy of this offices's Notice of Privacy Practices</Typography>
 
       <Stack direction={'column'} sx={{width:'400px', margin:'0 auto'}}>
         <Typography>First Name</Typography>
@@ -42,30 +44,33 @@ const HippaOne = () => {
         <Typography>Last Name</Typography>
         <TextField onChange={(e)=>{setLname(e.target.value)}} />
       </Stack>
-      <Stack direction={'row'}>
-        
-      </Stack>
-      <Box sx={{border:'1px solid black', width:'800px', height:'200px', marginTop:'80px'}}>
-      <SignaturePad 
-        ref={sigCanvas}
-        canvasProps={{
-          width:'800px',
-          height:'200px',
-
-        }}
-      /> 
+      <Typography variant='h5'sx={{marginTop:'40px'}}>
+        Sign Here
+      </Typography>
+      <Box sx={{ margin: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', border: '1px solid black', width: '80%', height: '200px', marginTop: '5px' }}>
+        <SignaturePad 
+          ref={sigCanvas}
+          canvasProps={{
+            width: '610px',
+            height: '200px',
+          }}
+        /> 
       </Box>
-      <Button onClick={clear}>Clear</Button>
-      <Button onClick={save}>Save</Button>
+      <Button onClick={clear} sx={{color:'black'}}>Clear</Button>
+      <Button onClick={save} sx={{color:'black'}}>Save</Button>
       
       { saved &&
-        <>
-        <PDFViewer height={'800px'} width={'800px'}>
+        <Box>
+        <PDFViewer width={'80%'} height={'600px'}>
           <PDF sig={blob} fname={fname} lname={lname} />
-        
         </PDFViewer>
-        <EmailSubmit  PDF={<PDF sig={blob} fname={fname} lname={lname} />} firstName={fname} lastName={lname} title={`${fname}_${lname}_hippa.pdf`}/>
-        </>
+        <Stack direction="row" spacing={2} justifyContent='center'>
+          <Button sx={{ backgroundColor: 'rgb(143, 158, 179)', width:'150px',height:'60px',marginBottom:'20px'}} variant='contained' onClick={() => {navigate('/')}}>
+              <Typography sx={{ textDecoration:'none', color:'white', fontSize:'24px'}}>Return</Typography>
+          </Button>
+          <EmailSubmit  PDF={<PDF sig={blob} fname={fname} lname={lname} />} firstName={fname} lastName={lname} title={`${fname}_${lname}_hippa.pdf`}/>
+        </Stack>
+        </Box>
       }
 
     </Box>

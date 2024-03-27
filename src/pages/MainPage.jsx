@@ -1,18 +1,21 @@
 import React, {useEffect, useState} from 'react'
-import {Stack, Box, Typography, createTheme, ThemeProvider} from '@mui/material'
+import {Stack, Box, Typography, createTheme, ThemeProvider, Button} from '@mui/material'
 import FormCard from '../components/FormCard'
+import { useNavigate } from 'react-router-dom'
 
 const MainPage = ({forms}) => {
+  const navigate = useNavigate()
+
    const myStyles = {
           margin: '80px',
           display: 'grid',
           gridTemplateColumns: 'auto auto', 
           gap: '4.3rem',
-      
    }
 
    const myStyles2 = {
     margin: '80px auto',
+    marginTop:'30px',
     width: '32%',
 
 }
@@ -56,7 +59,9 @@ const MainPage = ({forms}) => {
                 </Box>
               ))
             }
+            
           </Stack>
+          <Button onClick={()=>{navigate('/')}} variant="contained" sx={{ padding: '10px 50px 10px 50px', marginTop:'-15px',marginLeft:'315px', backgroundColor: 'rgb(143, 158, 179)',   opacity: showTitle ? 1 : 0, transition: 'opacity 0.5s ease', pointerEvents: showTitle ? 'auto' : 'none',}}>Return</Button>
          </ThemeProvider>
       </Box>
   )

@@ -23,7 +23,7 @@ const PatientFour = () => {
   return (
     <Stack sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
       <Box>
-        <ProgressBar selected={4}/>
+      <ProgressBar selected={4} amount={[1,2,3,4,5,6]}/>
         <Typography variant='h2' sx={{textAlign:'center'}}>Insurance Information</Typography>
         <Typography sx={{fontStyle:'italic', textAlign:'center', fontSize:'20px'}}>Please Note: We will request to scan your ID and insurance card</Typography>
       </Box>

@@ -12,8 +12,8 @@ const Submitted = () => {
 
   return (
     <Box sx={{textAlign:'center', backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
-      <Typography variant='h1'>
-        Submission!
+      <Typography variant='h2'>
+        Submission
       </Typography>
       <Typography sx={{marginBottom:'20px',fontStyle:'italic', textAlign:'center', fontSize:'20px'}}>
         If all the information is accurate. Please press submit.
@@ -24,7 +24,7 @@ const Submitted = () => {
       </PDFViewer>
       <EmailSubmit PDF={<PDFfile/>} firstName={informationLists[0].first_name} lastName={informationLists[0].last_name} title={`${informationLists[0].first_name}_${informationLists[0].last_name}_sign_in.pdf`}/>
       <Box>
-        <Navigate backLink={'/signInSix'} last={false}/>
+        <Navigate backLink={'/signInSix'} last={true}/>
       </Box>
         
     </Box>

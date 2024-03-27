@@ -1,14 +1,18 @@
 import { Box, FormControl, FormControlLabel, Radio, RadioGroup, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
-import Navigate from '../../components/Navigate'
+
+import {Navigate, ProgressBar} from '../../components'
 
 const HoosThree = ({list,backwardLink,forwardLink}) => {
   return (
-    <Box>
+    <Box sx={{ backgroundImage: 'linear-gradient(to top, lightblue, white)', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+      <ProgressBar selected={3} amount={[1,2,3,4,5]}/>
       {
         list.map((item,idx)=>(
-          <Box key={idx}>
-          <Typography>{'instruction' in item && item.instruction}</Typography>
+          <Box key={idx} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+         <Box sx={{ width:'80%', marginBottom:'10px', marginTop:'10px'}}>
+              <Typography sx={{fontWeight:'bold'}}>{'instruction' in item && item.instruction}</Typography>
+            </Box>
           <Typography>{'question' in item && item.question}</Typography>
           <Box>
             {'question' in item && 

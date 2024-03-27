@@ -22,7 +22,7 @@ const PatientThree = () => {
   return (
     <Stack sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
       <Box>
-        <ProgressBar selected={3}/>
+      <ProgressBar selected={3} amount={[1,2,3,4,5,6]}/>
         <Typography variant='h2' sx={{textAlign:'center'}}>Emergency Contact Information</Typography>
       </Box>
 

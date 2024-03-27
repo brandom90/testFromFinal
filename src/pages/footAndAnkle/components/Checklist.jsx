@@ -18,7 +18,7 @@ const Checklist = ({ items, id, yesOrNo, setListData }) => {
   };
 
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', maxWidth: 360,  }}>
       {items.map((value) => (
         <ListItemButton key={value} onClick={handleToggle(value)} style={{ cursor: 'pointer' }}>
           {id.includes("Button") ? (

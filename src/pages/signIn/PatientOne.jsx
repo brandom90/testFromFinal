@@ -62,7 +62,7 @@ const PatientOne = () => {
   return (
     <Stack sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)'}}>
       <Box>
-        <ProgressBar selected={1}/>
+      <ProgressBar selected={1} amount={[1,2,3,4,5,6]}/>
         <Typography variant="h2" sx={{textAlign:'center'}}>Patient Information</Typography>
       </Box>
 

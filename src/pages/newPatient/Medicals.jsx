@@ -14,15 +14,16 @@ const Medicals = () => {
 
   return (
     <Stack sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)',}}>
-
+      
     <Stack direction={styles.stack}>
       <Box sx={styles.textBox}>
-        <ProgressBar selected={1}/>
+      <ProgressBar selected={1} amount={[{num:1, link:'/newPatientOne'},{num:2, link:'/newPatientTwo'},{num:3, link:'/newPatientThree'},{num:4, link:'/newPatientFour'},{num:5, link:'/newPatientFive'},{num:6, link:'/newPatientSix'}]}/>
+      <Navigate backLink={'/newPatient'} forwardLink={'/newPatientTwo'} /> 
         <Typography variant='h2' textAlign={'center'}>Current Medical Information</Typography>
         <Typography textAlign={'center'}>Select Any of the following medical conditions you currently have</Typography>
         <Stack sx={{width:'300px', margin:'0 auto'}}>
           <TextField InputLabelProps={{style: {fontSize:24}}} inputProps={{style: {fontSize: 24}}} label='Name' variant='standard' onChange={(e)=>{names.name = e.target.value}}/>
-        
+          
           <TextField InputLabelProps={{style: {fontSize:24}}} inputProps={{style: {fontSize: 24}}} label='Last Name' variant='standard' onChange={(e)=>{names.last = e.target.value}} />
         </Stack>
       </Box>
@@ -35,13 +36,8 @@ const Medicals = () => {
 
         </FormGroup>
       </Box>
-      
-      
     </Stack>
-    <Box>
-         <Navigate backLink={'/newPatient'} forwardLink={'/newPatientTwo'} /> 
-    </Box>
-      
+   
     </Stack>
   )
 }

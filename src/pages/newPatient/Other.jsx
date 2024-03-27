@@ -21,7 +21,8 @@ const Other = () => {
   return (
     <Stack direction={styles.stack} sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)',}}>
       <Box sx={styles.textBox}>
-        <ProgressBar selected={6}/>
+      {/*<ProgressBar selected={6} amount={[1,2,3,4,5,6]}/> */}
+      <ProgressBar selected={6} amount={[{num:1, link:'/newPatientOne'},{num:2, link:'/newPatientTwo'},{num:3, link:'/newPatientThree'},{num:4, link:'/newPatientFour'},{num:5, link:'/newPatientFive'},{num:6, link:'/newPatientSix'}]}/>
         <Typography variant='h2' textAlign={'center'}>Other</Typography>
 
       </Box>

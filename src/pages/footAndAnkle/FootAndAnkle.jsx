@@ -119,13 +119,16 @@ var data = [
 
   
   return ( 
-    <Box>
+    <Box sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
      <Typography variant="h3" align="center">
-        AOFAS Questionaire (Foot and Ankle)
+        AOFAS Questionaire 
       </Typography>
-      <Box>
+      <Typography variant="h3" >
+      (Foot and Ankle)
+      </Typography>
+      <Box sx={{backgroundImage: 'linear-gradient(to top, lightblue, white)', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
       <Typography fontWeight='bold' sx={{marginTop:'10px'}}>Patient Information</Typography>
-        <Box sx={{marginLeft:'20px'}}>
+        <Box sx={{marginLeft:'20px', }}>
             <Typography>First Name: </Typography>
             <TextField id="First Name" label="Answer here" variant="filled" onChange={(e) => {setStateList[18](e.target.value)}}/>   
             <Typography>Last Name: </Typography>
@@ -226,7 +229,7 @@ var data = [
           </Box>
         </Box>
       </Box>
-      <Button onClick={handleSubmit}>Submit Form</Button>
+    
       <Box>
         <Button sx={{  position:'fixed', left:0, bottom:0, color:'black'}} onClick={() => {navigate(backwardLink)}}>
           <ArrowBackIcon  sx={{fontSize: 80,}}/>
